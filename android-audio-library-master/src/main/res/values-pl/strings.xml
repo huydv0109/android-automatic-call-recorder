@@ -1,0 +1,37 @@
+<resources>
+    <string-array name="encodings_text">
+        <item>.ogg (domyślnie)</item>
+        <item>.wav</item>
+    </string-array>
+
+
+    <string name="pref_source_title">Źródło Nagrywania</string>
+    <string name="pref_filters">Filtry</string>
+    <string name="pref_volume_title">Głośność Nagrywania</string>
+    <string name="pref_voice_title">Filtr Głosu</string>
+    <string name="pref_skip_title">Pomiń Ciszę</string>
+    <string name="pref_skip_summary">Pomiń Ciszę podczas nagrywania</string>
+
+    <string name="title_free">%1$s wolnych</string>
+    <string name="title_left">%1$s pozostało</string>
+    <string name="db">dB</string>
+    <string name="no">Nie</string>
+    <string name="yes">Tak</string>
+    <string name="delete_recording">Usuń Nagranie</string>
+    <string name="rename_recording">Zmień Nazwę Nagrania</string>
+    <string name="file_not_found">Nie znaleziono pliku</string>
+    <string name="menu_rename">Zmień Nazwę</string>
+    <string name="menu_delete">Usuń</string>
+    <string name="tolbar_all">Wszystko</string>
+    <string name="tolbar_stars">Gwiazdki</string>
+    <string name="tolbar_sort_name">Nazwa</string>
+    <string name="tolbar_sort_date">Data</string>
+	<string name="starred">Oznaczono gwiazdką</string>
+    <string name="not_starred">Nie Oznaczono gwiazdką</string>
+    <string name="pause_button">Pauza</string>
+    <string name="play_button">Play</string>
+    <string name="edit_button">Edytuj</string>
+    <string name="share_button">Udostępnij</string>
+    <string name="trash_button">usuń</string>
+    <string name="migrating_data">Migracja danych</string>
+</resources>

@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+import com.android.build.OutputFile
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "com.github.axet.callrecorder"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 171
+        versionName "1.6.16"
+    }
+//    signingConfigs {
+//        release {
+//            storeFile file(RELEASE_STORE_FILE)
+//            storePassword RELEASE_STORE_PASSWORD
+//            keyAlias RELEASE_KEY_ALIAS
+//            keyPassword RELEASE_KEY_PASSWORD
+//        }
+//    }
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+            minifyEnabled false
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def abi = output.getFilter(OutputFile.ABI)
+            if (abi == null)
+                abi = "universal";
+            output.outputFileName = org.apache.commons.io.FilenameUtils.getExtension(android.defaultConfig.applicationId) + "-" + abi + "-" + android.defaultConfig.versionName + "-" + variant.buildType.name + ".apk"
+        }
+    }
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+//    implementation 'com.github.axet:android-audio-library:1.0.111' // implementation project(':android-audio-library')
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation project (':android-audio-library-master')
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+//     Optional, if you use support library fragments:
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1'
+}

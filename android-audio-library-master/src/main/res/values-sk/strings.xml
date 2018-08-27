@@ -1,0 +1,37 @@
+<resources>
+    <string-array name="encodings_text">
+        <item>.ogg (predvolené)</item>
+        <item>.wav</item>
+    </string-array>
+
+    <string name="pref_source_title">Zdroj nahrávania</string>
+    <string name="pref_filters">Filtre</string>
+    <string name="pref_volume_title">Hlasitosť nahrávania</string>
+    <string name="pref_voice_title">Filter hlasu</string>
+    <string name="pref_voice_summary">Bandpass Voice Filter</string>
+    <string name="pref_skip_title">Preskočiť ticho</string>
+    <string name="pref_skip_summary">Preskočiť ticho počas nahrávania</string>
+
+    <string name="title_free">Voľné %1$s</string>
+    <string name="title_left">Zostáva %1$s</string>
+    <string name="db">dB</string>
+    <string name="no">Nie</string>
+    <string name="yes">Áno</string>
+    <string name="delete_recording">Odstrániť nahrávku</string>
+    <string name="rename_recording">Premenovať nahrávku</string>
+    <string name="file_not_found">Súbor nebol nájdený</string>
+    <string name="menu_rename">Premenovať</string>
+    <string name="menu_delete">Vymazať</string>
+    <string name="tolbar_all">Všetko</string>
+    <string name="tolbar_stars">Obľúbené</string>
+    <string name="tolbar_sort_name">Podľa názvu</string>
+    <string name="tolbar_sort_date">Podľa dátumu</string>
+    <string name="starred">Obľúbené</string>
+    <string name="not_starred">Nie obľúbené</string>
+    <string name="pause_button">Pozastaviť</string>
+    <string name="play_button">Prehrať</string>
+    <string name="edit_button">Upraviť</string>
+    <string name="share_button">Zdieľať</string>
+    <string name="trash_button">Vymazať</string>
+    <string name="migrating_data">Migrácia údajov</string>
+</resources>

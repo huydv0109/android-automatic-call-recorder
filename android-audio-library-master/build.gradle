@@ -1,0 +1,139 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
+
+repositories {
+    jcenter()
+    mavenLocal()
+    google()
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'signing'
+apply plugin: 'com.github.dcendents.android-maven' // 'gradle install' task
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 188
+        versionName "1.0.111"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(project.android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+signing {
+    sign configurations.archives
+}
+
+group = "com.github.axet"
+archivesBaseName = "android-audio-library"
+version = android.defaultConfig.versionName
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+//
+//            repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+//                authentication(userName: ossrhUsername, password: ossrhPassword)
+//            }
+//
+//            snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+//                authentication(userName: ossrhUsername, password: ossrhPassword)
+//            }
+//
+//            pom.project {
+//                name 'Android Library'
+//                packaging 'jar'
+//                description 'Android Simple Widgets and Support classes.'
+//                url 'https://gitlab.com/axet/android-audio-library'
+//
+//                scm {
+//                    connection 'scm:git:https://gitlab.com/axet/android-library'
+//                    developerConnection 'scm:git:https://gitlab.com/axet/android-library'
+//                    url 'https://gitlab.com/axet/android-audio-library'
+//                }
+//
+//                licenses {
+//                    license {
+//                        name 'GNU LESSER GENERAL PUBLIC LICENSE 3.0'
+//                        url 'http://www.gnu.org/copyleft/lesser.html'
+//                    }
+//                }
+//
+//                developers {
+//                    developer {
+//                        id 'axet'
+//                        name 'Alexey Kuznetsov'
+//                        email 'axet@me.com'
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
+
+dependencies {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api 'com.github.axet:android-library:1.24.29' // api project(':android-library')
+    api 'com.android.support:design:25.3.1'
+    api 'org.apache.commons:commons-math3:3.6.1'
+    api 'com.github.axet:jebml:0.0.2' // compile project(':jebml')
+    api 'com.github.axet:vorbis:1.0.2' // debugCompile project(path:':android-vorbis', configuration:'libraryDebug')
+    api 'com.github.axet:lame:1.0.3' // compile project(':android-lame')
+    api 'com.github.axet:java-flac-encoder:0.3.8'
+    api 'com.github.axet:opus:1.0.2' // compile project(':android-opus')
+    api 'com.github.axet:jssrc:1.0.2-1'
+    api 'org.gagravarr:vorbis-java-core:0.8'
+    api 'uk.me.berndporr:iirj:1.0'
+    def room_version = "1.1.1"
+//    api "android.arch.persistence.room:runtime:$room_version"
+//    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+
+    api 'android.arch.persistence.room:runtime:1.1.0-alpha1'
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.0-alpha1"
+    api 'android.arch.persistence.room:rxjava2:1.1.0-alpha1'
+    api 'android.arch.persistence.room:guava:1.1.0-alpha2'
+    testImplementation 'junit:junit:4.12'
+}

@@ -1,0 +1,37 @@
+<resources>
+    <string-array name="encodings_text">
+        <item>.ogg (по умолчанию)</item>
+        <item>.wav</item>
+    </string-array>
+
+    <string name="title_free">%1$s свободно</string>
+    <string name="title_left">%1$s</string>
+    <string name="db">дБ</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="delete_recording">Удалить запись</string>
+    <string name="rename_recording">Переименовать запись</string>
+    <string name="file_not_found">Файл не найден</string>
+    <string name="menu_rename">Переименовать</string>
+    <string name="menu_delete">Удалить</string>
+    <string name="tolbar_all">Все</string>
+    <string name="tolbar_stars">Отметки</string>
+    <string name="tolbar_sort_name">Имя</string>
+    <string name="tolbar_sort_date">Дата</string>
+    <string name="starred">Starred</string>
+    <string name="not_starred">Not starred</string>
+    <string name="pause_button">Pause</string>
+    <string name="play_button">Play</string>
+    <string name="edit_button">Edit</string>
+    <string name="share_button">Share</string>
+    <string name="trash_button">Delete</string>
+    <string name="migrating_data">Migrating data</string>
+
+    <string name="pref_source_title">Источник записи</string>
+    <string name="pref_filters">Фильтры</string>
+    <string name="pref_volume_title">Громкость записи</string>
+    <string name="pref_voice_title">Фильтр голоса</string>
+    <string name="pref_voice_summary">Голосовой частотный фильтр</string>
+    <string name="pref_skip_title">Skip Silence</string>
+    <string name="pref_skip_summary">Skip Silence while recording</string>
+</resources>

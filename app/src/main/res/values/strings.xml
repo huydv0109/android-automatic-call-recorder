@@ -1,0 +1,153 @@
+<resources>
+    <string name="app_name">Call Recorder</string>
+
+    <string-array name="source_text">
+        <item>Auto (default)</item>
+        <item>Voice Line</item>
+        <item>Mic</item>
+        <item>System Default</item>
+        <item>VoIP</item>
+        <item>Voice Recognition</item>
+        <item>Camcoder</item>
+        <item>System RAW</item>
+    </string-array>
+
+    <string-array name="source_values" translatable="false">
+        <item>-1</item>
+        <item>4</item>
+        <item>1</item>
+        <item>0</item>
+        <item>7</item>
+        <item>6</item>
+        <item>5</item>
+        <item>9</item>
+    </string-array>
+
+    <string-array name="sample_rate_text">
+        <item>48 kHz</item>
+        <item>44.1 kHz (CD)</item>
+        <item>32 kHz</item>
+        <item>22 kHz</item>
+        <item>16 kHz (default)</item>
+        <item>11 kHz</item>
+        <item>8 kHz (telephone)</item>
+    </string-array>
+
+    <string-array name="sample_rate_values" translatable="false">
+        <item>48000</item>
+        <item>44100</item>
+        <item>32000</item>
+        <item>22050</item>
+        <item>16000</item>
+        <item>11025</item>
+        <item>8000</item>
+    </string-array>
+
+    <string-array name="delete_text">
+        <item>Keep all recording</item>
+        <item>older than day</item>
+        <item>older than week</item>
+        <item>older than 1 month</item>
+        <item>older than 3 months</item>
+        <item>older than 6 months</item>
+    </string-array>
+
+    <string-array name="delete_values" translatable="false">
+        <item>off</item>
+        <item>1day</item>
+        <item>1week</item>
+        <item>1month</item>
+        <item>3month</item>
+        <item>6month</item>
+    </string-array>
+
+    <string-array name="format_text">
+        <item>2017-02-01 09.08.01.wav</item>
+        <item>20170201T090801.wav</item>
+        <item>1512340435 [Phone].wav</item>
+        <item>2017-02-01 09.08.01 ↓↑ [Caller ID].wav</item>
+    </string-array>
+
+    <string-array name="format_values" formatted="false" translatable="false">
+        <item>%s</item>
+        <item>%I</item>
+        <item>%T %p</item>
+        <item>%s %i %c</item>
+    </string-array>
+
+    <string-array name="themes_text">
+        <item>Theme White</item>
+        <item>Theme Dark</item>
+    </string-array>
+
+    <string-array name="themes_values" translatable="false">
+        <item>@string/Theme_Light</item>
+        <item>@string/Theme_Dark</item>
+    </string-array>
+
+    <string-array name="channels_text">
+        <item>Mono (default)</item>
+        <item>Stereo</item>
+    </string-array>
+
+    <string-array name="channels_values" translatable="false">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="action_settings">Settings</string>
+    <string name="call_recording">Calls Recording</string>
+    <string name="no_folder_app">No folder view application installed</string>
+    <string name="hold_by_call">pause (hold by call)</string>
+    <string name="encoding">encoding</string>
+    <string name="pause">pause</string>
+    <string name="edit">edit</string>
+    <string name="recording">recording</string>
+    <string name="encoding_title">Encoding...</string>
+    <string name="recording_title">Recording</string>
+    <string name="title_header">%1$s free ~ %2$s left</string>
+    <string name="open_recording_folder">Open Recording Folder</string>
+    <string name="recording_list_is_empty">Recording List is Empty\n\nCheck \'Calls Recording\' to Start Recording Calls</string>
+
+    <string name="source_default">(Default)</string>
+    <string name="source_mic">(Mic)</string>
+    <string name="source_line">(Voice Line)</string>
+
+    <string name="call_recordings_support">Call Recordings support</string>
+    <string name="call_recordings_support_text">Most phones does not support call recording, to enable Call Recording install open-source firmware. Different encoding options (ogg, MediaRecorder), different sources (phone line, mic, VoIP). Or ROOT your phone.</string>
+    <string name="recordings_quality">Recordings Quality</string>
+    <string name="recordings_quality_text">If you phone fails to support high quality call recording, application will ty MIC call recording (you may hear only one side: your or your opponent).</string>
+    <string name="task_managers">Task Managers</string>
+    <string name="task_managers_text">If you phone has Battery Optimization or Task Managers consider disabling them, to keep application running in background (optional)</string>
+
+    <string name="recording_enabled">Recording enabled</string>
+    <string name="recording_disabled">Recording disabled</string>
+    <string name="callrecent_auto_save">Auto save in (%1$d)</string>
+    <string name="calls_out">Out</string>
+    <string name="calls_in">In</string>
+    <string name="save_button">Save</string>
+    <string name="mixer_paths_done">System mixer configured, please reboot!</string>
+    <string name="mixer_paths_failed">Unable to configure system mixer</string>
+
+    <string name="pref_storage_title">Storage Path</string>
+    <string name="pref_rate_title">Sample Rate</string>
+    <string name="pref_encoding_title">Encoding</string>
+    <string name="pref_encoding_summary">Output file formats (.wav, .m4a, ...)</string>
+    <string name="pref_mode_title">Mode</string>
+    <string name="pref_mode_summary">Recording channels</string>
+    <string name="pref_delete_title">Delete Recordings</string>
+    <string name="pref_nameformat_title">Name Format</string>
+    <string name="pref_calldialog_title">Recent Call Dialog</string>
+    <string name="pref_calldialog_summary">Show rename / favorite dialog after call ended</string>
+    <string name="pref_optimization_title">Disable Battery Optimization</string>
+    <string name="pref_optimization_summary">Prevent app to be removed from memory</string>
+    <string name="pref_theme_title">Application Theme</string>
+    <string name="pref_theme_summary">Set application theme (dark / light)</string>
+    <string name="pref_mixerpaths_title">System Mixer Incall Recording</string>
+    <string name="pref_mixerpaths_summary">Allow system mixer to records calls for regular apps</string>
+    <string name="pref_recordings">Recordings</string>
+    <string name="pref_advanced">Advanced</string>
+    <string name="pref_application">Application</string>
+    <string name="menu_search">Search</string>
+    <string name="send_survey">Send Survey</string>
+</resources>

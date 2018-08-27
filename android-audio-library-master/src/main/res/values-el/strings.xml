@@ -1,0 +1,42 @@
+<resources>
+    <string-array name="encodings_text">
+        <item>.ogg (προεπιλογή)</item>
+        <item>.wav</item>
+    </string-array>
+
+    <string-array name="encodings_values" translatable="false">
+        <item>ogg</item>
+        <item>wav</item>
+    </string-array>
+
+    <string name="pref_source_title">Πηγή Εγγραφής</string>
+    <string name="pref_filters">Φίλτρα</string>
+    <string name="pref_volume_title">Ένταση Εγγραφής</string>
+    <string name="pref_voice_title">Φίλτρο Φωνής</string>
+    <string name="pref_voice_summary">Ζωνοπερατό Φίλτρο Φωνής</string>
+    <string name="pref_skip_title">Παρέλειψε τη Σιγή</string>
+    <string name="pref_skip_summary">Παρέλειψε τη Σιγή κατά την εγγραφή</string>
+
+    <string name="title_free">%1$s ελέυθερα</string>
+    <string name="title_left">απομένουν %1$s</string>
+    <string name="db">dB</string>
+    <string name="no">Όχι</string>
+    <string name="yes">Ναι</string>
+    <string name="delete_recording">Διαγραφή Εγγραφής</string>
+    <string name="rename_recording">Μετονομασία Εγγραφής</string>
+    <string name="file_not_found">Το αρχείο δεν βρέθηκε</string>
+    <string name="menu_rename">Μετονομασία</string>
+    <string name="menu_delete">Διαγραφή</string>
+    <string name="tolbar_all">Όλα</string>
+    <string name="tolbar_stars">Αστέρια</string>
+    <string name="tolbar_sort_name">Όνομα</string>
+    <string name="tolbar_sort_date">Ημερομηνία</string>
+    <string name="starred">Με αστέρι</string>
+    <string name="not_starred">Χωρίς αστέρι</string>
+    <string name="pause_button">Παύση</string>
+    <string name="play_button">Αναπαραγωγή</string>
+    <string name="edit_button">Επεξεργασία</string>
+    <string name="share_button">Διαμοίραση</string>
+    <string name="trash_button">Διαγραφή</string>
+    <string name="migrating_data">Μετεγκατάσταση δεδομένων</string>
+</resources>

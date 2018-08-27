@@ -1,0 +1,37 @@
+<resources>
+    <string-array name="encodings_text">
+        <item>.ogg (Standard)</item>
+        <item>.wav</item>
+    </string-array>
+
+    <string name="title_free">%1$s libre</string>
+    <string name="title_left">%1$s restant</string>
+    <string name="db">dB</string>
+    <string name="no">Non</string>
+    <string name="yes">Oui</string>
+    <string name="delete_recording">Effacer Enregistrement</string>
+    <string name="rename_recording">Renommer Enregistrement</string>
+    <string name="file_not_found">Fichier non trouvé</string>
+    <string name="menu_rename">Renommer</string>
+    <string name="menu_delete">Effacer</string>
+    <string name="tolbar_all">All</string>
+    <string name="tolbar_stars">Stars</string>
+    <string name="tolbar_sort_name">Name</string>
+    <string name="tolbar_sort_date">Date</string>
+    <string name="starred">Starred</string>
+    <string name="not_starred">Not starred</string>
+    <string name="pause_button">Pause</string>
+    <string name="play_button">Play</string>
+    <string name="edit_button">Edit</string>
+    <string name="share_button">Share</string>
+    <string name="trash_button">Delete</string>
+    <string name="migrating_data">Migrating data</string>
+
+    <string name="pref_source_title">Recording Source</string>
+    <string name="pref_filters">Filters</string>
+    <string name="pref_volume_title">Recording Volume</string>
+    <string name="pref_voice_title">Voice Filter</string>
+    <string name="pref_voice_summary">Bandpass Voice Filter</string>
+    <string name="pref_skip_title">Skip Silence</string>
+    <string name="pref_skip_summary">Skip Silence while recording</string>
+</resources>
